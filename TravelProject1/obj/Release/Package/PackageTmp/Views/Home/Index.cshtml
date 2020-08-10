@@ -1,0 +1,98 @@
+﻿@using TravelProject1.Models.Classlar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:80px;">Səyahət Bloglarım</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <a href="https://www.bakuguide.com/az/1-yemek-icmek/13-restoranlar">Restoranlar</a>                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <a href="https://tickets.az/avia/city/baku">Uçuşlar</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <a href="https://worldhitchhiker.com/">Otostop Qrupları</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <a href="https://getrentacar.com/en-US/car-rental/search?pickup[location]=Baku,%20Azerbaijan&utm_source=GoogleAds&utm_medium=cpc&utm_campaign=g_baku_eng&utm_term=+rent%20+car&utm_content={source_type}:{source}:{position_type}:{position}&gclid=Cj0KCQjwvb75BRD1ARIsAP6LcqtuQK8MrfLvYuP3CH6iLv6AaHtpQAVy96rOU-hq6O2pCyan0kqJR8caAm3dEALw_wcB">Avtomobil Kirayəsi</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:555px;height:345px;">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                  <li><img src="@x.BlogImg" alt=""></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Səyahət Şirkətimizə Xoş Gəldiniz!</h3>
+                    <p>Səyahət etdiyiniz yerləri bizimlə bölüşün. </p>
+                </div>
+                @Html.Action("Partial1","Home")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3","Home")
+                        @Html.Action("Partial4","Home")
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

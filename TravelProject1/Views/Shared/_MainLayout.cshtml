@@ -1,0 +1,81 @@
+﻿@{
+    Layout = null;
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>"Easy Trip" Səyahət Şirkəti</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/web/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="~/web/js/jquery.min.js"></script>
+    <script src="~/web/js/responsiveslides.min.js"></script>
+
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 1
+            $("#slider1").responsiveSlides({
+                auto: true,
+                nav: true,
+                speed: 340,
+                namespace: "callbacks",
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="logo"><a href="/Home/Index/"><img src="~/web/images/logo.png" alt="" /></a></div>
+            <div class="con-right">
+                <div class="grid1-l-img">
+                    <img src="~/web/images/contact.png" alt="">
+                </div>
+                <div class="grid1-l-desc">
+                    <p>Əlaqə : +99455 394 42 77</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="wrap">
+            <ul id="nav">
+                <li><a href="/Home/Index">Ana Səhifə</a></li>
+                <li><a class="hsubs" href="/About/Index">Haqqımızda</a></li>
+                <li>
+                    <a class="hsubs" href="destinations.html">Rəhbər</a>
+                    <ul class="subs">
+                        <li><a href="http://seyyah.az/restlist/8">Hotellər</a></li>
+                        <li><a href="https://www.bakuguide.com/az/1-yemek-icmek/13-restoranlar">Restoranlar</a></li>
+                        <li><a href="https://citylife.az/catalog/az/35">Muzeylər</a></li>
+                    </ul>
+                </li>
+                <li><a class="hsubs" href="/Blog/Index">Blog</a></li>
+                <li><a href="/Contact/Index">Əlaqə</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        @RenderBody()
+    </div>
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+                <p>&copy; 2020 Tour-lar və Səyahət Planları. Bütün Haqqlar Qorunur | Dizayn Olunub <a href="http://w3layouts.com">W3Layouts</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

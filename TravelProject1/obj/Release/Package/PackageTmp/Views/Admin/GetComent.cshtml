@@ -1,0 +1,27 @@
+﻿@model TravelProject1.Models.Classlar.Comment
+@{
+    ViewBag.Title = "GetComent";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Rəy Yeniləmə Səhifəsi</h2>
+<br />
+
+@using (Html.BeginForm("UpdateComent", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.IstifadeciAd)
+    @Html.TextBoxFor(x => x.IstifadeciAd, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Mail)
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.CommentString)
+    @Html.TextAreaFor(x => x.CommentString,15,1, new { @class = "form-control" })
+    <br />
+   
+    <button class="btn btn-success">Yenilə</button>
+}
+

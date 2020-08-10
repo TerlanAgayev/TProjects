@@ -1,0 +1,80 @@
+﻿@model TravelProject1.Models.Classlar.BlogComent
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="~/web2/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----webfonts---->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <!---header---->
+    <div class="header">
+        <div class="container">
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--/header-->
+    <div class="single">
+        <div class="container">
+            <div class="col-md-8 single-main">
+                @foreach (var x in Model.Blog1)
+                {
+                    <div class="single-grid">
+                        <img src="@x.BlogImg" alt="" style="margin-bottom:20px" />
+                        <a href="/Blog/BlogProperties/@x.Id">@x.Basliq</a>
+                        <p>@x.Aciqlama</p>
+                    </div>
+                    <br /><br />
+                }
+
+            </div>
+
+            <div class="col-md-4 side-content">
+                <div class="recent">
+                    <h3>Son Bloglar</h3>
+                    @foreach (var item in Model.SonBlog)
+                    {
+                        <ul>
+                            <li><a href="/Blog/BlogProperties/@item.Id">@item.Basliq</a></li>
+                        </ul>
+                    }
+                </div>
+                <div class="comments">
+                    <h3>Ən yaxşı Otellər</h3>
+                    <ul>
+                        <li><a href="https://www.hilton.com/en/hotels/gydhbhi-hilton-baku/?WT.srch=1&WT.mc_id=zIMDPDA0EMEA1MB2PSH3PPC_Google_search4cid119660811_aid6843552891_me_kkwd-291901928935Brand_Nano6GYDHBHI7en&utm_source=Google&utm_medium=ppc&utm_campaign=paidsearch&campaignid=119660811&adgroupid=6843552891&targetid=kwd-29190192893&gclid=Cj0KCQjwvb75BRD1ARIsAP6Lcqs4_cyklq8pQtOJt-0ctc-OqFr8lBDIr8Qulj1TGsJC-Rk_pUeRnXsaAqeiEALw_wcB&gclsrc=aw.ds">Hilton</a> </li>
+                        <li><a href="https://www.fairmont.com/baku/">Fairmont Baku </a></li>
+                        <li><a href="http://pasha-holding.az/business/absheron_hotel_group.html">Absheron Hotel </a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</body>
+<!---->
+</html>
+
+
+

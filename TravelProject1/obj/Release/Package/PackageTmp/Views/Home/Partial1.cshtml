@@ -1,0 +1,22 @@
+﻿@using TravelProject1.Models.Classlar
+@model List<Blog>
+<div class="con-bot">
+    @foreach (var x in Model)
+    {
+        <div class="left">
+            <div class="bot-left">
+                <img src="@x.BlogImg" style="width:300px; height:170px;" alt="" />
+            </div>
+            <div class="left-text">
+                <h4>@x.Basliq</h4>
+                <span class="doller">@x.Tarix.ToString("dd.MM.yyyy")</span>
+                <p>@x.Aciqlama.Substring(0,90)...</p>
+                <p><a href="/Blog/BlogProperties/@x.Id"><span class="read">Davamını Oxu>></span></a></p>
+            </div>
+        </div>
+    }
+   
+   @Html.Action("Partial2","Home")
+    <div class="clear"></div>
+</div>
+

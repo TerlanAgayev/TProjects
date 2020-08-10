@@ -1,0 +1,30 @@
+﻿@using TravelProject1.Models.Classlar
+@model List<Contact>
+@{
+    ViewBag.Title = "ContactUser";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>ContactUser</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Ad</th>
+        <th>Mail</th>
+        <th>Mövzu</th>
+        <th>Müraciət</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.AdSoyad</td>
+            <td>@x.Mail</td>
+            <td>@x.Movzu</td>
+            <td>@x.Mesaj</td>
+            <td><a href="/Admin/CommentSil/@x.Id" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+

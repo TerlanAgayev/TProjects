@@ -1,0 +1,28 @@
+﻿@model TravelProject1.Models.Classlar.Blog
+@{
+    ViewBag.Title = "GetBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Blog Yeniləmə Səhifəsi</h2>
+<br />
+
+@using (Html.BeginForm("UpdateBlog", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x=>x.Id)
+    @Html.TextBoxFor(x => x.Id, new { @class="form-control",@readonly="readonly"})
+    <br />
+     @Html.LabelFor(x=>x.Basliq)
+    @Html.TextBoxFor(x => x.Basliq, new { @class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Tarix)
+    @Html.TextBoxFor(x => x.Tarix, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BlogImg)
+    @Html.TextBoxFor(x => x.BlogImg, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciqlama)
+    @Html.TextAreaFor(x => x.Aciqlama,15,1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Yenilə</button>
+}
